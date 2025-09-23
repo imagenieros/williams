@@ -46,23 +46,6 @@
         <?php buildNavGrid(); ?>
       </div>
     </div>
-    
-  <!-- 
-    notas seba
-
-      El subtítulo de ahí es para mí lo que debería ser como mínimo el texto. Tal vez más grande incluso un punto
-
-      El chiquito lo dejaría para copirights abajo de fotos pero es incómodo de leer
-
-      No tiene antialiasing
-
-      
-
-
-
-
-
-  -->
 
     <!-- MAiN CONTENT -->
     <div class="detail-container swipe-scroller" id="SmoothScroll" data-component="SwipeScroller">
@@ -72,8 +55,13 @@
     </div>
 
     <!-- BOTTOM BAR -->
-    <div class="bottom-bar-container">
-      <button class="js-back">Back</button>
+    <div class="bottom-bar-container show-homepage">
+      <div class="homepage-icon">
+        <img src="./assets/images/home.png" />
+      </div>
+      <div class="back-icon js-back">
+        <img src="./assets/images/volver.png" />
+      </div>
     </div>
 
   </div><!-- .global-container -->

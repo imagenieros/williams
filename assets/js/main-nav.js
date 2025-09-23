@@ -5,7 +5,8 @@ class MainNav {
         this.$navElements = this.$el.querySelectorAll('.js-icon-action')
         this.$contentElements = document.querySelectorAll('.js-content')
         this.$backButton = document.querySelector('.js-back')
-        
+        this.$bottomNavContainer = document.querySelector('.bottom-bar-container')
+
         this.bindEvents()
     }
 
@@ -14,6 +15,7 @@ class MainNav {
         this.$navElements.forEach(element => {
             element.addEventListener('click', (e) => {
                 this.hideDetails();
+                this.showBackNav()
                 this.showDetails(e.currentTarget.dataset.key);
                 this.$globalContainer.classList.add('show-detail')
                 window.resetSwiper()
@@ -23,7 +25,8 @@ class MainNav {
         this.$backButton.addEventListener('click', () => {
             window.resetSwiper()
             this.$globalContainer.classList.remove('show-detail')
-            
+            this.showHomepageNav()
+
             // add a bit of delay, waiting for transition
             setTimeout(() => {
                 this.hideDetails()
@@ -37,6 +40,8 @@ class MainNav {
         this.$contentElements.forEach(element => {
             element.classList.add('hidden')
         });
+
+        this.showHomepageNav()
     }
 
 
@@ -47,5 +52,18 @@ class MainNav {
             }
         });
     }
+
+
+    showHomepageNav() {
+        this.$bottomNavContainer.classList.add('show-homepage')
+        this.$bottomNavContainer.classList.remove('show-back')
+    }
+
+
+    showBackNav() {
+        this.$bottomNavContainer.classList.remove('show-homepage')
+        this.$bottomNavContainer.classList.add('show-back')
+    }
+
 
 }

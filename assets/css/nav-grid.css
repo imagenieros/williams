@@ -26,8 +26,40 @@
 }
 
 .text-container {
-  padding: 2vh;
+  padding: 2vh 0;
   text-align: center;
   font-size: 2vh;
   color: gray;
+}
+
+
+.bottom-bar-container .homepage-icon,.back-icon {
+  display: none;
+}
+
+.bottom-bar-container .homepage-icon {
+  text-align: center;
+}
+
+.bottom-bar-container .homepage-icon img {
+  height: 8vh;
+  margin-top: 1vh;
+}
+
+
+.bottom-bar-container .back-icon {
+  text-align: center;
+}
+
+.bottom-bar-container .back-icon img {
+  height: 3vh;
+  margin-top: 3.5vh;
+}
+
+.bottom-bar-container.show-homepage .homepage-icon {
+  display: block;
+}
+
+.bottom-bar-container.show-back .back-icon {
+  display: block;
 }
