@@ -16,8 +16,8 @@ function buildNavGrid() {
                 $jsonData = json_decode($data, true);
                 $title = $jsonData['title'];
                 $pin = $jsonData['gpio_pin'];
-                if (array_key_exists('value', $jsonData)) {
-                    $value = $jsonData['value'];
+                if (array_key_exists('gpio_value', $jsonData)) {
+                    $value = $jsonData['gpio_value'];
                 } else {
                     $value = 255;
                 }
